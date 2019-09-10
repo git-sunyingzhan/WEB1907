@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单控件</title>
+		
+	</head>
+	<body>
+		<form action="#" method="get" enctype="">
+			<!-- 文本框 -->
+			<label for="M">账号：</label><input type="text" name="user" placeholder="请输入用户名" maxlength="12" /><br>
+			<label for="F">密码：</label><input type="password" name="pwd" /><br>	
+			<!-- 单选框 -->
+			性别： 
+			<label for="M">男</label><input type="radio" name="sex" id="M" value="M" checked />
+			<label for="F">女</label><input type="radio" name="sex" id="F" value="F" /><br>
+			<!-- 多选框 -->
+			爱好：
+			足球<input type="checkbox" name="hondy" id="zq" value="" checked />
+			蓝球<input type="checkbox" name="hondy" id="lq" checked />
+			乒乓球<input type="checkbox" name="hondy" id="ppq" /><br>
+			
+			<!-- 文件选择框 -->
+			<input type="file" name="photo" id="" value="" /><br>
+			<!-- 隐藏域 -->
+			隐藏信息：<input type="hidden" name="hid" id="" value="123" /><br>
+			<!-- 文本域 -->
+			<textarea rows="5" cols="20" name="des"></textarea><br>
+			<!-- 下拉框 -->
+			城市：
+			<select name="city">
+				<option value="shanghai">上海</option>
+				<option value="guangzhou">广州</option>
+				<option value="beijing">北京</option>
+				<option value="shenzhen">深圳</option>
+				<option value="henan">河南</option>
+			</select><br>
+			<!-- 补充 -->
+			<iframe src="../day01/day01.txt">百度</iframe>
+			<br>
+			<input type="color" name="color" id="" value="" />
+			<input type="submit" id="" name="" />
+			<input type="reset" name="" id="" />
+			<input type="button" name="" id="" value="普通" onclick="alert('大家好')" /><br>
+			
+			<fieldset style="width:200px;">
+				<legend>请选择：</legend>
+				<input type="checkbox" name="a" />普通管理员<br>
+				<input type="checkbox" name="b" />超级管理员<br>
+			</fieldset >
+		</form>
+	</body>
+</html>

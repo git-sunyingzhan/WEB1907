@@ -1,0 +1,102 @@
+1、表单标签
+	表单用于显示信息，收集信息，提交信息到服务器。
+	表单：form标签和表单控件
+	定义表单：<form></form>表示要将此元素中涵盖的控件中的数据传输到服务器
+	主要属性：
+		action:表单提交的URL地址
+		method:表单提交数据的方式，   get和post
+		enctype：表单数据的编码方式
+	表单控件：
+		表单可以包含很多不同类型的表单控件，表单控件是一种html元素的信息输入项
+		包含：
+			input元素：文本框、密码框、单选框、复选框、按钮、隐藏域、文件选择框
+			非input元素：标签、文本域、下拉框
+	1)文本框
+		<input type="text" name="user" />
+		常用属性：
+			type：规定input元素的类型，默认文本框类型
+			name：规定input元素的名字，（重要，后台会根据名字取数据）
+			value：规定元素的值
+			readonly：true输入框为只读状态
+			placehoder：输入框提示信息
+			maxlength：规定输入框的字符长度
+	2）密码框
+		<input type="password" name="pwd" />
+	3)单选框
+		<input type="radio" name="" value="" checked="" />
+		常用属性：
+		name:用于实现分组，同一组的名称必须相同，
+		value：提交的数据
+		checked：选中
+	4)标签
+		<label for="控件的id"></label>
+		for：设置文本所关联的控件的id，关联后点击该标签等同于点击该控件。
+	5)多选框
+		<input type="checkbox" name="分组名" value="值" checked />
+	6)文件选择框
+		<input type="file" name="">
+	7)隐藏域
+		<input type="hidden" name="" value="" />
+		在表单中包含不希望用户看到的信息。重要：很多时候借助此控件向后台提交重要数据。
+	8)文本域
+		<textarea name="" cols="" rows=""></textarea>
+		文本域相当于多行的文本框
+		cols指定文本域的列数
+		rows指定文本域的行数
+	9)下拉框
+		<select>
+			<option value="">文本内容</option>
+		</select>
+	10)按钮
+		提交按钮：<input type="submit" value="">
+			传送表单数据给服务器或者其他程序处理
+		重置按钮：<intput type="reset" value="">
+			清空表达内容，将全部表达控件设置为最初的默认值
+		普通按钮：<input type="button" value="">
+			用于用户执行客户端脚本代码
+	补充：
+	11)引入外部html文件
+		<iframe src="外部html文件地址"></iframe>
+	12)分组标签
+		<filedest style="width:200px">
+			<legend>请选择：</legend>
+			<input type="checkbox" name="a" />普通管理员<br>
+			<input type="checkbox" name="b" />超级管理员<br>
+		</filedset>
+	13）H5新增表单控件
+2、CSS
+	1)什么是CSS？
+		CSS（Cascading Style Sheets）层叠样式表。样式用来定义浏览器如何显示html元素（美化元素）。样式通常存放在样式表中。
+	2）使用CSS的好处
+		a.样式声明实现所有元素的通用
+		b.实现页面内容与表现的分离
+		c.提高代码的复用性和维护性
+	3）CSS使用
+		a.行内式（不推荐）
+			将样式定义在html元素中，只对当前元素有效
+			写法：
+				setp1:给元素添加style属性
+				step2:style属性中直接写样式声明
+				例如：<p style="样式1：样式值；样式2:样式值；"></p>
+		b.内部式（内嵌式）
+			样式定义在html页面的<head>头元素的<style>标签内，仅对当前页面中对标签起作用
+			写法：
+				step1:<head>标签中添加<style>标签
+				step2:<style>标签中写css声明语法（样式定义：选择器）
+				例如：
+					<head>
+						<style>
+							h3:{
+								color:red;
+							}
+						</style>
+					</head>
+					h3{}中的h3是选择器，
+					样式声明规则：选择器{样式声明}
+		c.外部式（推荐）
+			定义在外部的.css文件中，css文件是一个纯文本文件，以.css为后缀，此文件只包含样式声明规则。
+			写法：
+				step1:创建外部样式文件(.css) @charset utf-8
+				step2:将样式文件引入到html页面中
+				<link src="文件路径" rel="stylesheet" type="text/css" />
+				说明rel：表示被链接到文件是一个样式表
