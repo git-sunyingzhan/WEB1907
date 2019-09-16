@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>案例1</title>
+		<script type="text/javascript">
+			function squares(){
+				var num =  document.getElementById("num").value;
+				if (num==""||isNaN(num)) {
+					document.getElementById("result").innerText = "瞪大你的狗眼看看，输入必须是数字！";
+				} else{
+					var d = parseFloat(num);
+					document.getElementById("result").innerText = "= "+ (d*d).toFixed(2);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		请输入数字：<input type="text" name="" id="num" value="2" />
+		<span id="result" ></span><br>
+		<input type="button" name="" id="" value="求平方" onclick="squares()" />
+	</body>
+</html>

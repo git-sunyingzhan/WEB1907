@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>案例二</title>
+		<script type="text/javascript">
+			function guessNum() {
+				var answer = 50;
+				var hint;
+				var num = document.getElementById("num").value;
+				var showResult = document.getElementById("result");
+				if (num == "" || isNaN(num)) {
+					showResult.innerText = "请输入数字";
+				} else {
+					num == answer ? hint = "猜对了" : num > answer ? hint = "大了" : hint = "小了";
+					showResult.innerText = hint;
+					document.getElementById("num").value = null;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 用户在页面输入一个值，判断是否为50，要求提示用户大了，还是小了（三目运算） -->
+		<h1>比大小</h1>
+		请输入一个数：<input type="text" name="" id="num" placeholder="请输入数字和50比较" />
+		<span id="result"></span><br>
+		<input type="button" name="" id="" value="提交" onclick="guessNum()" />
+	</body>
+</html>

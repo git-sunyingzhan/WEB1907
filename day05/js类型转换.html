@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js类型转换</title>
+		<script type="text/javascript">
+			//自动转换类型
+			var s = "a";
+			var n = 1;
+			var b = true;
+			console.log(s+n);
+			console.log(s+b);
+			console.log(n+b);
+			console.log(b+b);
+			
+			//强制类型转换
+			var x = 100;
+			console.log(x);
+			console.log(typeof x);
+			console.log(x.toString());
+			console.log(typeof x.toString());
+			
+			console.log(parseInt(34.25));
+			console.log(parseInt("34.25"));
+			console.log(parseInt("aaa34.25"));
+			console.log(parseInt("34.65aaa"));
+			console.log(parseInt("哈哈哈"));
+			
+			console.log(isNaN(true));
+			console.log(isNaN("true"));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

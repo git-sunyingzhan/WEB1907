@@ -4,8 +4,57 @@
 		<meta charset="utf-8">
 		<title>js变量类型</title>
 		<script type="text/javascript">
-			var age = 20;
+			/*var age = 20;
 			console.log(age);
+			console.log(typeof age);
+			age = "年龄";
+			console.log(age);
+			console.log(typeof age);
+			var a;
+			console.log(typeof a);*/
+			
+			//number类型
+			var age = 25;
+			var salary = 30.6;
+			console.log(typeof age);
+			console.log(typeof salary);
+			
+			//string类型
+			var name = "张三张三张三";
+			console.log(name);
+			console.log(typeof name);
+			
+			console.log(name.indexOf("三"));
+			console.log(name.indexOf("三",2));
+			console.log(name.replace("三","四"));
+			
+			// boolean类型
+			var tag = true;
+			console.log(tag);
+			console.log(typeof tag);
+			console.log(tag+tag);
+			
+			// undefined
+			var x;
+			console.log(x);
+			console.log(typeof x);
+			
+			// null
+			var a = null;
+			console.log(a);
+			console.log(typeof a);
+			
+			var y = 1;
+			function abc(){
+				y = "张三";
+				// var b = 5;	// 局部变量(私有变量)
+			}
+			console.log(y);
+			abc();
+			console.log(y);
+			
+			// console.log(b);  // ReferenceError	引用错误
+			
 		</script>
 	</head>
 	<body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>案例三</title>
+		<script type="text/javascript">
+			function dislodge() {
+				var count = 0;
+				var txt = document.getElementById("textarea").value;
+				while (txt.indexOf("sb") != -1) {
+					txt = txt.replace("sb", "**");
+					count++;
+				}
+				document.getElementById("span").innerText = "敏感词出现次数：" + count;
+				document.getElementById("textarea2").value = txt;
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 统计输入框中的敏感字(sb)出现的次数，将敏感字替换为"**" -->
+		<textarea rows="5" cols="50" id="textarea">
+			kjgbkesbrjgkjer vbwhjbsdjbcjasmcnkasb
+		</textarea><br><br>
+		<input type="button" name="" id="" value="去除敏感字" onclick="dislodge()" />
+		<span id="span"></span><br><br>
+		<textarea rows="5" cols="50" id="textarea2">
+		</textarea>
+	</body>
+</html>
