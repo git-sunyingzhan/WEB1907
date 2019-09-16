@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录界面</title>
+		<link rel="stylesheet" type="text/css" href="css/day04.css"/>
+		
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="登录" />
+		<div class="loginBox" >
+			<img src="../day01/images/bd_logo1.png" >
+			<form action="" method="" enctype="">
+				<div>
+					<label for="nc" class="left">昵称：</label>
+					<input type="text" name="user" id="nc" class="text_txt" />
+				</div>
+				<div>
+					<label for="mm" class="left">密码：</label>
+					<input type="password" name="pwd" id="mm" class="text_txt" />
+				</div>
+				<div>
+					<input type="checkbox" id="auto_login" name="auto_login" />
+					<label for="auto_login">下次自动登录</label>
+					<a href="#">忘记密码</a>
+				</div>
+				<div>
+					<input type="submit" value="登录" class="ok" />
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			document.getElementById("btn").onclick = function(){
+				document.getElementsByClassName("loginBox")[0].setAttribute("style","display: block;");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+@charset "utf-8";
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+/* 设置背景 */
+body{
+	background: url(../images/timg.png) no-repeat fixed center;
+}
+
+/* 大盒子位置 */
+.loginBox{
+	display: none;
+	width: 450px;
+	margin: 0 auto;
+	margin-top: 145px;
+}
+
+/* logo图片的位置 */
+img{
+	width: 212px;
+	height: 120px;
+	
+	margin-left: 119px;
+}
+
+/* form表单设置 */
+form{
+	background: rgba(188,191,213,0.3);
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	padding: 20px 10px;
+	margin-top: 20px;
+}
+
+/* form表单下的div行高 */
+form>div{
+	line-height: 50px;
+	/* margin-left: 40px; */
+}
+
+/* 昵称和密码的位置 */
+.left{
+	margin-left: 40px;
+}
+
+/* input输入框样式 */
+.text_txt{
+	width: 300px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid white;
+	color: white;
+	text-indent: 2em;
+}
+
+/* checkbox设置 */
+#auto_login{
+	margin-left: 75px;
+	width: 12px;
+	height: 12px;
+}
+
+/* a的位置设置 */
+div>a{
+	color: white;
+	text-decoration: none;
+	float: right;
+	margin-right: 55px;
+}
+
+/* 登录按钮 */
+.ok{
+	width: 300px;
+	height: 40px;
+	margin-left: 75px;
+	color: white;
+	background: rgba(255,255,255,0.5);
+	border: 1px solid rgba(255,255,255,0.5);
+}
