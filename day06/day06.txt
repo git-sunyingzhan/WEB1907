@@ -33,3 +33,71 @@
              abs(x);返回x的绝对值
              floor();向下取整
              ceil();向上取整
+4、Date对象
+    创建方式；
+        var date = new Date();  //当前系统时间
+        var date2 = new Date("2008/08/08"); //指定日期时间
+    常用函数：
+        date.getTime();毫秒值
+             getDate();日期
+             getDay();一周的第几天
+             getFullYear();年
+             toLocaleString();转换为本机时间格式字符串
+             setDate();修改日期本身时间
+5、Array对象(数组里面的数据类型可以不一致)
+    创建方式：
+        var arr1 = [10,"张三",true,];
+        var arr2 = new Array(10,"张三",true,);
+        var arr3 = new Array();
+        var arr4 = new Array(6);//指定数组初始长度
+    常用属性和方法：
+        length;数组长度
+        reverse();反转数组
+        sort([函数名])；数组排序
+            默认规则：数据的首个字符排序
+            自定义规则：根据传入的函数排序
+6、Function对象
+    js中函数就是Function对象，函数名就是指向Function对象的引用，可以直接使用函数名访问函数对象，
+    函数名()是调用函数
+
+    函数定义：
+        方式一：使用function关键字声明一个函数
+            function 函数名([参数列表]){
+                函数体；
+                return 返回值；
+            }
+            函数的返回值默认返回undefined，可以使用return返回具体的值
+        方式二：匿名函数
+            var 函数名 = function ([参数列表]){
+                函数体；
+                return 返回值；
+            }
+            函数名([参数列表]);
+        方式三：创建一个Function对象
+            var 函数名 = new Function("参数1","参数2","函数体;");
+            //小括号里面前面的是函数的参数，后面的是函数体；
+        方式四：箭头函数（es6以后）
+            var f4 = (a,b) => {
+                return a+b;
+            }
+            等价于
+            var f4 = (a,b) => a+b;
+
+    注意：在js中没有类似与java中的重载现象，如果方法名相同，则以最后一个为准
+    js如果需要实现类似于重载的效果，可以使用arguments对象实现重载效果，arguments代表当前方法
+    被传入的所有参数形成的一个参数数组
+    arguments.length    函数的参数个数
+    arguments[下标]     获取对应下标的参数
+
+    补充说明：变量的作用域（var 无 let const）
+        1.var 声明的变量可以修改，不初始化输出undefined，有作用域（存在变量提升）
+            定义在函数内部->私有变量->整个函数体
+            定义在函数外部->全局变量->整个js
+        2.let是块级作用域，函数内部使用let定义后，对函数外部无影响
+        3.const定义对变量初始化以后不可以修改，属于常量
+        4.没有任何关键字声明对变量->全局变量
+    全局函数：所有js对象都可以使用
+        parseInt()  isNaN() ....
+        eval() -->执行函数
+               -->只接收合法都表达式和语句
+               -->只接受原始都字符串
