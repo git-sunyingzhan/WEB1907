@@ -1,0 +1,35 @@
+内置对象：
+	简单内置对象：Number、String
+	组合内置对象：Math、Date、Array
+	复杂内置对象：Function、RegExp
+1、Number对象
+	创建方式：
+		var age = 10;							number类型
+		var salary = new Number(2000);			object类型
+    常用函数：
+        num.toFixed(n)      将数值转换为字符串，并通过四舍五入保留小数点后n位，如果不够则补0
+2、String对象
+    创建方式：
+        var str = "abc";
+        var str = new String("abc");
+    常用属性和函数：
+        length：返回字符串的长度
+        toUpperCase():小写转大写
+        toLowerCase():大写转小写
+        charAt(index):返回指定位置的字符
+        indexOf(findStr,[index]):从指定下标位置查找字符串第一个（index）出现的位置
+        lastIndexOf(findStr)：返回一个指定字符串最后一次出现的位置
+        substring(start,[end])：截取指定下标位置的字符（前包后不包）
+        split(byStr [howmany])：将字符串进行拆分，得到拆分后的字符串数组
+        replace(findStr,toStr):字符串替换（第一个），属于不完全替换
+3、Math对象
+    常用函数：
+        Math.sqrt(a);返回数字a的平方根
+             pow(a,b);返回a的b次方
+             random();返回0～1之间的随机数
+             round(x);返回数字x四舍五入最近的整数
+             max(x,y,z...)找出其中最大值
+             min(x,y,z....)最小值
+             abs(x);返回x的绝对值
+             floor();向下取整
+             ceil();向上取整

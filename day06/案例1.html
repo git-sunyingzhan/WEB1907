@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>案例1</title>
+    <script type="text/javascript">
+        // 案例：将字符串中的某一个字符完全替换
+        var str = "sbjdsbvwefleiwoerkgbdcdsb";
+        console.log(str);
+        //方案一    b---G
+        while (str.indexOf("b") != -1) {
+            str = str.replace("b", "G");
+        }
+        console.log(str);
+
+        // 方案二   G-->*
+        var strs = str.split("G");
+        str = "";
+        for (const s in strs) {
+            if (s == strs.length - 1) {
+                str += strs[s];
+            } else {
+                str += strs[s] + "*";
+            }
+        }
+        console.log(str);
+
+        //  方案三  正则表达式
+        console.log(str.replace(/\*/g, "I"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
