@@ -71,4 +71,19 @@
         5）根据选择器查找
             document.querySelector("选择器");       返回符合选择器的第一个节点
             document.querySelectorAll("选择器");    返回符合选择器的所有节点
+        6）根据添加class属性找节点
+            document.getElementsByClassName("类名");
+    读取、修改:
+        innerHTML:设置或者获取位于对象起始和结束标签内的文本，
+            不解析html文本，将文本内容当成字符串打印
+        innerText：设置或者获取位于对象起始和结束标签内的文本，
+            只能获取解析之后的文本内容
+        读取：ele.innerHTML         ele.innerText
+        修改：ele.innetHTML = 值    ele.innerText = 值
         
+        读取、修改样式：
+            ele.style
+            ele.style = "样式1:样式值；样式2:样式值；";
+            ele.style.样式 = "样式值";
+            注意：样式属性的写法    font-size改成fonSize(驼峰写法)
+            

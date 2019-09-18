@@ -17,5 +17,8 @@ onload = function () {
     // console.log(liEles);
 
     liEles = document.querySelectorAll("li");
+    // console.log(liEles);
+
+    liEles = document.getElementsByClassName("li_3");
     console.log(liEles);
 }
