@@ -1,0 +1,74 @@
+外部对象
+	BOM(Broswer Object Model):浏览器对象模型
+		用来访问和操作浏览器窗口，使js有能力和浏览器"对话"。执行的操作不与页面的内容发生直接关系。
+		没有相关的标准，但被广泛的支持和使用。
+	DOM(Document Object Model):html文档对象模型
+		用于操作文档，定义了访问和操作html文档的标准方法，应用程序通过DOM操作，来实现对html文档数据的操作，
+		当页面被加载时，浏览器会创建页面的文档对象模型（DOM树），通过可编程的对象模型，js能够创建动态的html（元素、属性、样式、事件）
+	DOM常用操作：读取、修改、创建、删除节点
+	
+1.BOM对象
+	window是前台最大的对象，表示浏览器窗口。全部js都是全局变量、全局对象、全局函数。
+	比如：
+		alert(111);等价于window.alert(111);
+	5个全局属性：
+		doucment:窗口中显示的html文档
+		history:浏览器窗口的历史记录
+		location:窗口文件地址
+		screen:浏览器当前屏幕
+		navigator:浏览器相关信息
+	5个对象：
+		window的5个属性可以分别获取其对应的5个对象
+		Document-->DOM
+		History：
+			length:返回访问的地址个数
+			back():返回上一个地址
+			forward():进入下一个地址
+			go(index):index<0 回退；index>0 前进
+		Location：
+			href:当前窗口正在浏览的网页地址
+			reload:重新载入当前页面（刷新）
+		Screen：
+			width:
+			height:
+			availWidth:可用宽度
+			availHeight:可用高度
+		Navigator：
+			userAgent:获取浏览器相关信息
+	全局函数：
+		对话框：
+			window.alert(msg)；提示对话框
+			window.confirm(msg)；确定对话框
+			window.prompt();弹出输入框
+		
+		打开新窗口：
+			window.open(url);	
+		
+		定时器：
+			a.一次性定时器：在一个设定的时间间隔后执行代码，不是函数被调用之后立即执行
+				var t = window.setTimeout(执行语句|函数,时间);
+				t:表示返回已经启动的定时器对象
+				停止定时器：clearTimeout(t);
+			b.周期性定时器：以一定的时间间隔执行代码，循环执行
+				var t = setTnterval(执行语句|函数,时间);
+				停止定时器：clearInterval(t);
+	案例：显示时间按钮、启动时间按钮、停止时间按钮
+2.DOM对象
+	DOM对象（DOM树）在页面加载的时候由浏览器生成的整个html文档，操作文档中任何内容，都需要通过document
+	js能过创建动态的html->元素、属性、样式、事件
+	js对DOM的操作：增、删、改、查、读
+	
+	查找（节点）：
+		1）通过id查找
+			document.getElementById("id名");		如果id值错误则返回null
+		2）通过标签名查找
+			document.getElementsByTagName("标签名");		根据指定的标签名，返回全部的元素数组，如果标签名错误，返回长度为0
+        3）通过添加name属性查找
+            document.getElementsByName("name属性值");        根据指定的name返回全部元素组成的数组
+        4）通过层次查找节点
+            ele.parentNode  遵循文档的上下层次结构，查找单个父节点
+            ele.childNodes  遵循文档的上下层次结构，查找多个子节点
+        5）根据选择器查找
+            document.querySelector("选择器");       返回符合选择器的第一个节点
+            document.querySelectorAll("选择器");    返回符合选择器的所有节点
+        

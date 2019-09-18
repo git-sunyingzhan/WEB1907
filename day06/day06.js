@@ -121,3 +121,12 @@ console.log(one);
 
 var f1 = new Function("a", "b", "console.log" + "(a+b)");
 f1(1, 2);
+
+
+//RegExp对象
+var reg1 = /a/g;
+var reg2 = new RegExp("a","g");
+
+console.log(/^abc/.test("abdc"));
+console.log(/abc$/.test("dabc"));
+console.log(/^abc{3}/.text("abccc"));
