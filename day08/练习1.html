@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+            /* position: fixed; */
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="show"
+        src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3331606800,763812844&fm=26&gp=0.jpg">
+    <img class="hidden"
+        src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1487351610,315303232&fm=26&gp=0.jpg">
+    <img class="hidden"
+        src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3473128871,1574804327&fm=26&gp=0.jpg">
+    <img class="hidden"
+        src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3441742992,2765570575&fm=26&gp=0.jpg">
+</body>
+<script>
+    var imgs = document.getElementsByTagName("img");
+    var index = 0;
+    setInterval(function () {
+        for (let i = 0; i < imgs.length; i++) {
+            if (index == i) {
+                imgs[index].setAttribute("class", "show");
+            } else {
+                imgs[i].setAttribute("class", "hidden");
+            }
+        }
+        index++;
+        if (index == imgs.length) {
+            index = 0;
+        }
+    }, 1000);
+</script>
+
+</html>

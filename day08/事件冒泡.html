@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件冒泡</title>
+</head>
+
+<body>
+    <div>
+        DIV
+        <span>SPAN</span>
+    </div>
+</body>
+<script>
+    // 找div节点添加onclick事件
+    document.getElementsByTagName("div")[0].onclick = function () {
+        alert("DIV");
+    }
+
+    document.getElementsByTagName("span")[0].onclick = function (e) {
+        e.cancelBubble = true;
+        alert("SPAN");
+    }
+</script>
+
+</html>

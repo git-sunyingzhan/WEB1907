@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二级联动</title>
+</head>
+
+<body>
+    省份：
+    <select name="" id="pro">
+        <option value="0">不限</option>
+        <option value="1">江苏</option>
+        <option value="2">安徽</option>
+        <option value="3">山东</option>
+    </select>
+    城市：
+    <select name="" id="city">
+        <option value="0">不限</option>
+    </select>
+</body>
+<script>
+    var city_list = [
+        ["苏州", "无锡", "南京", "徐州", "南通", "连云港", "淮安", "盐城", "扬州", "镇江", "泰州"],
+        ["合肥", "芜湖", "安庆"],
+        ["济南", "青岛", "烟台"]
+    ];
+
+    document.getElementById("pro").onchange = function () {
+        var city = document.getElementById("city");
+        city.length = 1;
+
+        for (let i = 0; i < city_list[this.value - 1].length; i++) {
+            var optionNode = document.createElement("option");
+            optionNode.innerText = city_list[this.value - 1][i];
+            optionNode.setAttribute("value", i + 1);
+            city.append(optionNode);
+        }
+    };
+</script>
+
+</html>

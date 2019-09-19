@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义对象</title>
+</head>
+
+<body>
+    <input type="button" name="" id="btn" value="直接创建对象" />
+    <input type="button" name="" id="btn2" value="构造器创建对象" />
+    <input type="button" name="" id="btn3" value="JSON创建对象" />
+</body>
+<script>
+    document.getElementById("btn").onclick = function () {
+        var user = new Object();
+        //属性
+        user.name = "小小";
+        user.age = 18;
+
+        user.work = function () {
+            alert("我是女生，漂亮的女生。");
+        }
+
+        alert(user.name);
+        alert(user.age);
+        user.work();
+    }
+
+    //构造器创建对象
+    function Student(name, age) {
+        this.name = name;
+        this.age = age;
+        this.work = function () {
+            alert("我是JAVA学员");
+        }
+    }
+
+    document.getElementById("btn2").onclick = function () {
+        var s = new Student("花花", 12);
+        alert(s.name);
+        alert(s.age);
+        s.work();
+    }
+
+    //JSON创建对象
+    document.getElementById("btn3").onclick = function () {
+        var p = {
+            "name": "姚明",
+            "age": 39,
+            "work": function () {
+                alert("我是男篮主席。");
+            }
+        }
+
+        alert(p.name);
+        alert(p.age);
+        p.work();
+    }
+</script>
+
+</html>

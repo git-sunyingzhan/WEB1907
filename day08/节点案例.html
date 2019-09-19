@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <select></select>
+</body>
+<script>
+    var selectEle = document.getElementsByTagName("select")[0];
+    var optionEle = document.createElement("option");
+    //使用innerHTML属性方式添加“江苏”节点
+    selectEle.innerHTML += "<option>江苏</option>";
+
+    //通过函数方式添加“浙江”，加在父节点最后
+    optionEle.innerText = "浙江";
+    selectEle.append(optionEle);
+
+    //通过函数方式添加“安徽”节点，加在“浙江”之前
+    var optionEle = document.createElement("option");
+    optionEle.innerText = "安徽";
+    var optionEles = document.getElementsByTagName("option")[1];
+
+    selectEle.insertBefore(optionEle, optionEles);
+</script>
+
+</html>

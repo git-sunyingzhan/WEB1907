@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态搜索</title>
+</head>
+
+<body>
+    <input type="text" name="" id="btn" /><br>
+    <span id="span"></span>
+</body>
+<script>
+    var btnEle = document.getElementById("btn");
+    var spanEle = document.getElementById("span");
+    btnEle.onfocus = function () {
+        timer = setInterval(() => {
+            spanEle.innerText = btnEle.value;
+        }, 100);
+    }
+    btnEle.onblur = function () {
+        clearInterval(timer);
+    }
+</script>
+
+</html>
