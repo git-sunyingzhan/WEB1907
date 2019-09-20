@@ -13,38 +13,82 @@
         <!-- 按钮行 -->
         <tr>
             <td colspan="4">
-                <input type="button" name="" id="" value="删除" />
-                <input type="button" name="" id="" value="转发" />
-                <input type="button" name="" id="" value="举报" />
-                <input type="button" name="" id="" value="查询" />
+                <input type="button" disabled name="btn" value="删除" />
+                <input type="button" disabled name="btn" value="转发" />
+                <input type="button" disabled name="btn" value="举报" />
+                <input type="button" disabled name="btn" value="查询" />
             </td>
         </tr>
         <!-- 数据行 -->
         <tr>
-            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" onclick="chooseAll();" id="ctrlBox"></td>
             <td>发件人</td>
             <td>主题</td>
             <td>邮件内容</td>
         </tr>
         <tr>
-            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" onclick="chooseOne();" name="mail"></td>
             <td>李四</td>
             <td>离职邮件</td>
             <td>世界很大，我想去看看。</td>
         </tr>
         <tr>
-            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" onclick="chooseOne();" name="mail"></td>
             <td>张三</td>
             <td>请假邮件</td>
             <td>不想上班，请批准。</td>
         </tr>
         <tr>
-            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" onclick="chooseOne();" name="mail"></td>
             <td>王五</td>
             <td>加班邮件</td>
             <td>公司是我家，美化靠大家。</td>
         </tr>
     </table>
 </body>
+<script>
+    //单击全选框时的操作
+    /*
+    1.所有的选择框变成勾选状态，    checked=true
+    2.按钮行的所有按钮变成可编辑状态    disabled=false
+    */
+    function chooseAll() {
+        var ctrlBox = document.getElementById("ctrlBox");
+        var mails = document.getElementsByName("mail");
+        for (let i = 0; i < mails.length; i++) {
+            const element = mails[i];
+            element.checked = ctrlBox.checked;
+        }
+        changeBtns();
+    }
+
+    function changeBtns() {
+        var btns = document.getElementsByName("btn");
+        for (let i = 0; i < btns.length; i++) {
+            const element = btns[i];
+            element.disabled = !getNum();
+        }
+    }
+
+    function getNum() {
+        var count = 0;
+        var emils = document.getElementsByName("mail");
+        for (let i = 0; i < emils.length; i++) {
+            if (emils[i].checked) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    //单击单选框时的操作
+    function chooseOne() {
+        //找所有邮件
+        var emils = document.getElementsByName("mail");
+        //全选框
+        var ctrlBox = document.getElementById("ctrlBox");
+        ctrlBox.checked = emils.length == getNum();
+    }
+</script>
 
 </html>
