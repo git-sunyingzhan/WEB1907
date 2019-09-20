@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jq的DOM操作</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    请输入姓名：<input type="text" name="user" value="王五">
+    <input type="button" onclick="addNode()" value="添加" />
+    <input type="button" value="删除" onclick="deleteNode()">
+    <input type="button" name="" id="" value="清空" onclick="emptyNode()" />
+    <ul>
+        <li>张三</li>
+        <li class="c">李四</li>
+    </ul>
+    <ul></ul>
+</body>
+<script>
+    function addNode() {
+        var $user = $("input[name=user]").val();
+        // console.log($user);
+
+        var liNode = "<li>" + $user + "</li>";
+        var $liNode = $(liNode);
+
+        $("ul:first").append(liNode);
+    }
+
+    function deleteNode() {
+        $("li").remove(".c");
+    }
+
+    function emptyNode() {
+        $("li:eq(1)").empty();
+    }
+</script>
+
+</html>
