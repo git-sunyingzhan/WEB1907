@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQ使用</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <input value="张三" id="i1" class="c1">
+    <input id="i2" value="李四" />
+</body>
+<script>
+    //找“张三”节点（js原生）
+    var inputEle = document.getElementById("i1");
+    // var inputEle = document.getElementsByClassName("c1");
+    // var inputEle = document.querySelectorAll("inout")[0];
+
+    //通过jQ查找
+    // alert($("#i1"));
+    // console.log($("#i1")[0]);
+    // console.log($("#i1").val());
+
+    //原生js->jq
+    //console.log(inputEle.value);
+    // console.log($(inputEle).val());
+    $("#i1").val("王五");
+
+    //jq->原生js
+
+    var i1 = $("#i1")[0];
+    console.log(i1.value);
+
+    i1.value = "找流";
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>属性定位选择器</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <span class="c1">a</span>
+    <span class="c2">b</span>
+    <span class="c3">c</span>
+    <span class="d">d</span>
+    <span>e</span>
+</body>
+<script>
+    //根据class属性找节点
+    // $("[class]").css("color", "red");
+
+    // $("[class=c1]").css("color", "red");
+
+    // $("span[class!=d]").css("color", "red");
+
+    $("[class^=2]").css("color", "red");
+</script>
+
+</html>

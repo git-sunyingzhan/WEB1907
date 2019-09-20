@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <p id="i" class="c">节点1</p>
+    <p class="c">节点2</p>
+    <p>节点3</p>
+</body>
+<script>
+    //id找节点
+    var $p1 = $("#i");
+    // console.log($p1);
+
+    var $p2 = $(".c");
+    // console.log($($p2[0]).html());
+
+    //元素找节点
+    var $p = $("p");
+    // console.log($p);
+
+    //并集或者交集
+    var $p3 = $("#i.c");
+    // console.log($p3);
+
+    var $p4 = $("#i,.c");
+    console.log($p4);
+</script>
+
+</html>

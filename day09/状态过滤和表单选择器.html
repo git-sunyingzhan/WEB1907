@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>状态过滤和表单选择器</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <form action="" method="" enctype="">
+        用户名：<input type="text" value="zs"><br>
+        密码：<input type="password" value="124" disabled><br>
+        爱好：
+        <input type="checkbox" checked>睡觉
+        <input type="checkbox" name="" id="">听歌
+        <input type="checkbox" name="" id="" checked>玩游戏
+    </form>
+</body>
+<script>
+    console.log($("input:checked"));
+</script>
+
+</html>

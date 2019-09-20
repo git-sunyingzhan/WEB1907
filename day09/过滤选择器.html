@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过滤选择器</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 四行两列 -->
+    <table border="1px" cellpadding="0px" cellspacing="0px" width="300px">
+        <tr>
+            <td>姓名</td>
+            <td>职位</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>研发</td>
+        </tr>
+        <tr>
+            <td>小丽</td>
+            <td>UI</td>
+        </tr>
+        <tr>
+            <td id="i">王五</td>
+            <td>销售</td>
+        </tr>
+    </table>
+    <input type="hidden" name="" id="" value="100" />
+    <input type="text" value="200">
+    <span>今年国庆放8天</span>
+    <span>我想抽出7天学习</span>
+    <span></span>
+</body>
+<script>
+    //将表格第一行变红
+    // $("table tr:first").css("background-color", "red");
+    //将表格的最后一行变成蓝色
+    // $("table tr:last").css("background-color", "blue");
+
+    //将表格奇数行变成黄色
+    // $("table tr:odd").css("background-color", "yellow");
+
+    //将表格偶数行变成红色
+    // $("table tr:even").css("background-color", "red");
+
+    //将表格中除了id=“i”的节点，其他节点为绿色
+    // $("table td:not('#i')").css("background-color", "green");
+
+    //找“张三“节点
+    // $("table tr:eq(1) td:eq(0)").css("background-color", "yellow");
+
+    // $("table tr:lt(2)").css("background-color", "red");
+    // $("table tr:gt(2)").css("background-color", "red");
+
+    //找隐藏元素
+    // console.log($("input:hidden"));
+    //找可见元素
+    // console.log($("input:visible").val());
+
+    // console.log($("span:contains('天')"));
+    console.log($("span:empty"));
+</script>
+
+</html>
