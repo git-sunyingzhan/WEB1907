@@ -42,3 +42,23 @@ jQ操作DOM事件
     注意：原生对象需要转换成jQ对象才能操作
     方式二：
     jQ对象.on("事件名",function(){});
+
+DOM加载问题
+    原生：       window.onload = function(){};
+    表示可以让窗口先加载，完成DOM树之后再执行匿名函数。
+    jQuery:     $(function(){});
+    页面加载完成之后，再执行匿名函数。
+
+    jQ事件对象：event对象
+        1.事件冒泡处理          e.stopProPagation();
+        2.合成事件             e.hover(function(){},function(){})
+    jQuery动画效果：
+        obj.hide():
+            show():
+            fadeIn():
+            fadeOut():
+            slideUp():
+            slideDown():
+    自定义动画：
+        obj.animate({效果(样式),时间，[回调函数]});
+        {}描述动画执行之后的元素样式

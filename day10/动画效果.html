@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>动画效果</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    div {
+        width: 150px;
+        height: 150px;
+        background-color: green;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<body>
+    <input type="button" value="隐藏" onclick="hideDiv();" />
+    <input type="button" value="自定义" onclick="selfDiv();" />
+    <div></div><br>
+</body>
+<script>
+    function hideDiv() {
+        $("div").slideToggle(5000);
+    }
+    function selfDiv() {
+        $("div").animate({ "margin-left": "500px", "margin-top": "500px" }, 5000, function () {
+            $(this).animate({ "margin-left": "0px" }, 5000);
+        });
+    }
+
+</script>
+
+</html>
