@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <title>jq的DOM操作</title>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <style>
+        .big {
+            font-size: 25px;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     请输入姓名：<input type="text" name="user" value="王五">
     <input type="button" onclick="addNode()" value="添加" />
     <input type="button" value="删除" onclick="deleteNode()">
-    <input type="button" name="" id="" value="清空" onclick="emptyNode()" />
+    <input type="button" value="清空" onclick="emptyNode()" />
+    <input type="button" value="修改" onclick="changeNode()">
     <ul>
         <li>张三</li>
         <li class="c">李四</li>
@@ -19,6 +29,12 @@
     <ul></ul>
 </body>
 <script>
+    //修改节点
+    function changeNode() {
+        //修改节点的value值
+        $("input[name=user]").val("赵四");
+    }
+
     function addNode() {
         var $user = $("input[name=user]").val();
         // console.log($user);

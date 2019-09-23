@@ -1,0 +1,44 @@
+jQuery-->DOM操作
+    增加节点
+        创建节点：jQ对象节点
+        指定节点位置：
+            父节点.append(字节点)       父节点的最后一个节点
+            父节点.prepend(字节点)      父节点的第一个字节点
+            兄弟.after(子节点)          作为兄弟节点的下一个弟弟节点
+            兄弟.before(子节点))        作为兄弟节点的上一个哥哥节点
+    删除对象
+        obj.remove([选择器])        删除节点
+        obj.empty()                清空节点内容
+	修改（属性、文本内容、样式）
+		obj.css()
+		obj.val()
+	节点text文本内容
+		obj.text()//获取				ele.innerText
+		obj.text("值")				ele.innerText = "值"
+	节点的属性
+		obj.attr("属性名");//获取
+		ele.属性名；					ele.getAttribute("属性名");
+		obj.attr("属性名"，"属性值");//修改
+		ele.属性名 = "值";			ele.setAttribute("属性名","属性值")
+	节点样式
+		obj.css();//获取				ele.style;
+		obj.css("样式","样式值")		ele.style = "样式：样式值";
+		obj.css({"样式1":"值1","样式2":"值2"});//多样式修改
+	动态修改样式（推荐）
+		obj.addClass("类名");//给对象添加指定的class
+		obj.removeClass("类名");//删除对象指定的class
+    查找（遍历）节点
+        obj.children();//找所有字节点
+        obj.children("选择器");根据选择器找字节点
+            next()
+            prev()
+            siblings()
+            parent()
+            parents()
+            find()
+jQ操作DOM事件
+    方式一：
+    jQ对象.事件名(function(){});
+    注意：原生对象需要转换成jQ对象才能操作
+    方式二：
+    jQ对象.on("事件名",function(){});
